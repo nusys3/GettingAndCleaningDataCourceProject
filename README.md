@@ -31,16 +31,16 @@ This script is using dplyr and stringr packages
 source(file = "./run_analysis.R")
 ```
 
-## How "run_analysis.R script file is working"
+## What "run_analysis.R" script file is doing"
 1. Merges the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement.
 3. Uses descriptive activity names to name the activities in the data set
 4. Appropriately labels the data set with descriptive variable names.
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-As a result, the script will create tidy_data_set.txt file in the working directory with col.names = TRUE and row.names = FALSE.
+As a result, the script will create **tidy_data_set.txt** file in the **working directory** with col.names = TRUE and row.names = FALSE.
 
-## How to read output data in your R environment
+## How to read output data file (tidy_data_set.txt) in your R environment
 ```R
 data <- read.table(file = "./tidy_data_set.txt", header = TRUE)
 ```
