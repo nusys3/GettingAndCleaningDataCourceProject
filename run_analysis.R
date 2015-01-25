@@ -14,7 +14,7 @@ library(stringr)
         
         # Load training data
         trainSubject <- read.table(file = "./Dataset/train/subject_train.txt", header = FALSE)
-        trainSet <- read.table(file = "./Dataset/train/X_train.txt", header = FALSE)
+                trainSet <- read.table(file = "./Dataset/train/X_train.txt", header = FALSE)
         trainLabels <- read.table(file = "./Dataset/train/y_train.txt", header = FALSE)
         
         # Merge test data and training data
@@ -52,6 +52,16 @@ library(stringr)
         names(selectedSetWithActivity) <- gsub("-","", names(selectedSetWithActivity))
         names(selectedSetWithActivity) <- gsub("\\()","", names(selectedSetWithActivity))
 
+        # Fix the error of BodyBody
+        names(selectedSetWithActivity) <- gsub("BodyBody","Body", names(selectedSetWithActivity))
+
+        names(selectedSetWithActivity) <- gsub("^t","Time", names(selectedSetWithActivity))
+        names(selectedSetWithActivity) <- gsub("^f","Freq", names(selectedSetWithActivity))
+        #names(selectedSetWithActivity) <- gsub("Acc","Acceleration", names(selectedSetWithActivity))
+        #names(selectedSetWithActivity) <- gsub("Mag","Magnitude", names(selectedSetWithActivity))
+        #names(selectedSetWithActivity) <- gsub("mean","Mean", names(selectedSetWithActivity))
+        #names(selectedSetWithActivity) <- gsub("std","StandardDeviation", names(selectedSetWithActivity))
+
 # Appropriately labels the data set with descriptive variable names.
         # Merge by ActivityID (ActivityNum) to label data
         mData <- merge(activitylabels, selectedSetWithActivity,by.x="ActivityID", by.y="ActivityNum", all=TRUE)
@@ -61,10 +71,11 @@ library(stringr)
         # that describes the variable better
         mData <- select(mData, -(ActivityID))
         
-# From the data set in step 4, creates a second, independent tidy data set 
-# with the average of each variable for each activity and each subject.
+        # From the data set in step 4, creates a second, independent tidy data set 
+        # with the average of each variable for each activity and each subject.
         # create data set
         newSet <- aggregate(formula = . ~ ActivityName + SubjectNum, data = mData, FUN = "mean")
+        names(newSet)[3:81] <- gsub("^","Avg", names(newSet))[3:81]
 
         # save as txt file to for submit with col.names TRUE and row.names FALSE to working directory.
         write.table(x = newSet, file = "./tidy_data_set.txt", row.names = FALSE, col.names = TRUE)

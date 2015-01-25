@@ -14,6 +14,8 @@ What run_analysis.R script does is to come up with the **tidy data set** for the
 
 4. Labels the dataset with descriptive variable names
    	* Find **Data Dictionary** below for more detail
+	* Fixed errors in variable names that contains "BodyBody" by replacing it to "Body"
+	(AvgFreqBodyBodyAccJerkMagmean, AvgFreqBodyBodyAccJerkMagstd, AvgFreqBodyBodyAccJerkMagmeanFreq, AvgFreqBodyBodyGyroMagmean, AvgFreqBodyBodyGyroMagstd, AvgFreqBodyBodyGyroMagmeanFreq, AvgFreqBodyBodyGyroJerkMagmean, AvgFreqBodyBodyGyroJerkMagstd, AvgFreqBodyBodyGyroJerkMagmeanFreq)
 
 5. Calculates the average of each measurement for each activity and each subject
    	* **6 activities * 30 subjects** for 180 observations in the result
@@ -21,7 +23,6 @@ What run_analysis.R script does is to come up with the **tidy data set** for the
 
 
 # Data Dictionary
-
 
 ## ActivityName
 An activity the person(subject) performed wearing a smartphone on the waist.
@@ -40,167 +41,240 @@ An identifier of the subject who carried out the experiment
 
 + 1:30
 
-
 ## AvgTimeBodyAccmeanX
+Average value of means of Time to obtain the body linear acceleration in X direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyAccmeanY
+Average value of means of Time to obtain the body linear acceleration in Y direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyAccmeanZ
+Average value of means of Time to obtain the body linear acceleration in Z direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyAccstdX
+Average value of standard deviations of Time to obtain the body linear acceleration in X direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyAccstdY
+Average value of standard deviations of Time to obtain the body linear acceleration in Y direction for the activity and the subject (grouped by ActivityName and Subject)
+ 
 ## AvgTimeBodyAccstdZ
+Average value of standard deviations of Time to obtain the body linear acceleration in Z direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeGravityAccmeanX
+Average value of means of Time to obtain the gravity acceleration in X direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeGravityAccmeanY
+Average value of means of Time to obtain the gravity acceleration in Y direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeGravityAccmeanZ
+Average value of means of Time to obtain the gravity acceleration in Z direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeGravityAccstdX
+Average value of standard deviations of Time to obtain the gravity acceleration in X direction for the activity and the subject (grouped by ActivityName and Subject) 
+
 ## AvgTimeGravityAccstdY
+Average value of standard deviations of Time to obtain the gravity acceleration in Y direction for the activity and the subject (grouped by ActivityName and Subject) 
+
 ## AvgTimeGravityAccstdZ
+Average value of standard deviations of Time to obtain the gravity acceleration in Z direction for the activity and the subject (grouped by ActivityName and Subject) 
+
 ## AvgTimeBodyAccJerkmeanX
+Average value of means of Time to obtain the Jerk signals of body linear acceleration in X direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyAccJerkmeanY
+Average value of means of Time to obtain the Jerk signals of body linear acceleration in Y direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyAccJerkmeanZ
+Average value of means of Time to obtain the Jerk signals of body linear acceleration in Z direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyAccJerkstdX
+Average value of standard deviations of Time to obtain the Jerk signals of body linear acceleration in X direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyAccJerkstdY
+Average value of standard deviations of Time to obtain the Jerk signals of body linear acceleration in Y direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyAccJerkstdZ
+Average value of standard deviations of Time to obtain the Jerk signals of body linear acceleration in Z direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyGyromeanX
+Average value of means of Time to obtain the body angular velocity in X direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyGyromeanY
+Average value of means of Time to obtain the body angular velocity in Y direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyGyromeanZ
+Average value of means of Time to obtain the body angular velocity in Z direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyGyrostdX
+Average value of standard deviation of Time to obtain the body angular velocity in X direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyGyrostdY
+Average value of standard deviations of Time to obtain the body angular velocity in Y direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyGyrostdZ
+Average value of standard deviations of Time to obtain the body angular velocity in Z direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyGyroJerkmeanX
+Average value of means of Time to obtain the Jerk signal of body angular velocity in X direction for the activity and the subject (grouped by ActivityName and Subject) 
+
 ## AvgTimeBodyGyroJerkmeanY
+Average value of means of Time to obtain the Jerk signal of body angular velocity in Y direction for the activity and the subject (grouped by ActivityName and Subject) 
+
 ## AvgTimeBodyGyroJerkmeanZ
+Average value of means of Time to obtain the Jerk signal of body angular velocity in Z direction for the activity and the subject (grouped by ActivityName and Subject) 
+
 ## AvgTimeBodyGyroJerkstdX
+Average value of standard deviations of Time to obtain the Jerk signal of body angular velocity in X direction for the activity and the subject (grouped by ActivityName and Subject) 
+
 ## AvgTimeBodyGyroJerkstdY
+Average value of standard deviations of Time to obtain the Jerk signal of body angular velocity in Y direction for the activity and the subject (grouped by ActivityName and Subject) 
+
 ## AvgTimeBodyGyroJerkstdZ
+Average value of standard deviations of Time to obtain the Jerk signal of body angular velocity in Z direction for the activity and the subject (grouped by ActivityName and Subject) 
+
 ## AvgTimeBodyAccMagmean
+Average value of means of Time to obtain the magnitude of body linear acceleration for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyAccMagstd
+Average value of standard deviations of Time to obtain the magnitude of body linear acceleration for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeGravityAccMagmean
+Average value of means of Time to obtain the magnitude of gravity linear acceleration for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeGravityAccMagstd
+Average value of standard deviations of Time to obtain the magnitude of gravity linear acceleration for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyAccJerkMagmean
+Average value of means of Time to obtain the Jerk of the magnitude of body linear acceleration for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyAccJerkMagstd
+Average value of standard deviations of Time to obtain the Jerk of the magnitude of body linear acceleration for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyGyroMagmean
+Average value of means of Time to obtain the Jerk of the magnitude of body angular velocity for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyGyroMagstd
+Average value of standard deviations of Time to obtain the Jerk of the magnitude of body angular velocity for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyGyroJerkMagmean
+Average value of means of Time to obtain the Jerk of the magnitude of body angular velocity for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgTimeBodyGyroJerkMagstd
+Average value of standard deviations of Time to obtain the Jerk of the magnitude of body angular velocity for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccmeanX
+Average value of means of Frequency to obtain the body linear acceleration in X direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccmeanY
+Average value of means of Frequency to obtain the body linear acceleration in Y direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccmeanZ
+Average value of means of Frequency to obtain the body linear acceleration in Z direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccstdX
+Average value of standard deviations of Frequency to obtain the body linear acceleration in X direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccstdY
+Average value of standard deviations of Frequency to obtain the body linear acceleration in Y direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccstdZ
+Average value of standard deviations of Frequency to obtain the body linear acceleration in Z direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccmeanFreqX
+Average value of weighted averages of Frequency to obtain the body linear acceleration in X direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccmeanFreqY
+Average value of weighted averages of Frequency to obtain the body linear acceleration in Y direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccmeanFreqZ
+Average value of weighted averages of Frequency to obtain the body linear acceleration in Z direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccJerkmeanX
+Average value of means of Frequency to obtain the Jerk signals of body linear acceleration in X direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccJerkmeanY
+Average value of means of Frequency to obtain the Jerk signals of body linear acceleration in Y direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccJerkmeanZ
+Average value of means of Frequency to obtain the Jerk signals of body linear acceleration in Z direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccJerkstdX
+Average value of standard deviations of Frequency to obtain the Jerk signals of body linear acceleration in X direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccJerkstdY
+Average value of standard deviations of Frequency to obtain the Jerk signals of body linear acceleration in Y direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccJerkstdZ
+Average value of standard deviations of Frequency to obtain the Jerk signals of body linear acceleration in Z direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccJerkmeanFreqX
+Average value of weighted averages of Frequency to obtain the Jerk signals of body linear acceleration in X direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccJerkmeanFreqY
+Average value of weighted averages of Frequency to obtain the Jerk signals of body linear acceleration in Y direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccJerkmeanFreqZ
+Average value of weighted averages of Frequency to obtain the Jerk signals of body linear acceleration in Z direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyGyromeanX
+Average value of means of Frequency to obtain the body angular velocity in X direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyGyromeanY
+Average value of means of Frequency to obtain the body angular velocity in Y direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyGyromeanZ
+Average value of means of Frequency to obtain the body angular velocity in Z direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyGyrostdX
+Average value of standard deviation of Frequency to obtain the body angular velocity in X direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyGyrostdY
+Average value of standard deviations of Frequency to obtain the body angular velocity in Y direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyGyrostdZ
+Average value of standard deviations of Frequency to obtain the body angular velocity in Z direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyGyromeanFreqX
+Average value of weighted averages of Frequency to obtain the body angular velocity in X direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyGyromeanFreqY
+Average value of weighted averages of Frequency to obtain the body angular velocity in Y direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyGyromeanFreqZ
+Average value of weighted averages of Frequency to obtain the body angular velocity in Z direction for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccMagmean
+Average value of means of Frequency to obtain the magnitude of body linear acceleration for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccMagstd
+Average value of standard deviations of Frequency to obtain the magnitude of body linear acceleration for the activity and the subject (grouped by ActivityName and Subject)
+
 ## AvgFreqBodyAccMagmeanFreq
-## AvgFreqBodyBodyAccJerkMagmean
-## AvgFreqBodyBodyAccJerkMagstd
-## AvgFreqBodyBodyAccJerkMagmeanFreq
-## AvgFreqBodyBodyGyroMagmean
-## AvgFreqBodyBodyGyroMagstd
-## AvgFreqBodyBodyGyroMagmeanFreq
-## AvgFreqBodyBodyGyroJerkMagmean
-## AvgFreqBodyBodyGyroJerkMagstd
-## AvgFreqBodyBodyGyroJerkMagmeanFreq
+Average value of weighted averages of Frequency to obtain the magnitude of body linear acceleration for the activity and the subject (grouped by ActivityName and Subject)
 
+## AvgFreqBodyAccJerkMagmean
+Average value of means of Frequency to obtain the Jerk of the magnitude of body linear acceleration for the activity and the subject (grouped by ActivityName and Subject)
 
+## AvgFreqBodyAccJerkMagstd
+Average value of standard deviations of Frequency to obtain the Jerk of the magnitude of body linear acceleration for the activity and the subject (grouped by ActivityName and Subject)
 
+## AvgFreqBodyAccJerkMagmeanFreq
+ Average value of weighted averages of Frequency to obtain the Jerk of the magnitude of body linear acceleration for the activity and the subject (grouped by ActivityName and Subject)
 
+## AvgFreqBodyGyroMagmean
+Average value of means of Frequency to obtain the Jerk of the magnitude of body angular velocity for the activity and the subject (grouped by ActivityName and Subject)
 
-For the tidy data set list each of the variables and a brief description of what it represents. 
-You can explain your reasoning about which columns (variables) were included or excluded, as you feel appropriate, to help the reader understand the tidy data set you have created. 
+## AvgFreqBodyGyroMagstd
+Average value of standard deviations of Frequency to obtain the Jerk of the magnitude of body angular velocity for the activity and the subject (grouped by ActivityName and Subject)
 
+## AvgFreqBodyGyroMagmeanFreq
+Average value of weighted averages of Frequency to obtain the Jerk of the magnitude of body angular velocity for the activity and the subject (grouped by ActivityName and Subject)
 
-you are aiming for something like the quiz 1 codebook. To start with you have the features info file, but there are a bunch of things wrong with it. All the warnings are about things that will be wrong if you were to use features info as it is provided.
+## AvgFreqBodyGyroJerkMagmean
+Average value of means of Frequency to obtain the Jerk of the magnitude of body angular velocity for the activity and the subject (grouped by ActivityName and Subject)
 
-you have gotten rid of variables - there should only be the variables to do with mean and standard deviation left in your tidy data
+## AvgFreqBodyGyroJerkMagstd
+Average value of standard deviations of Frequency to obtain the Jerk of the magnitude of body angular velocity for the activity and the subject (grouped by ActivityName and Subject)
 
-you have added variables- subject and activity are not part of the orignal features.txt
+## AvgFreqBodyGyroJerkMagmeanFreq
+Average value of weighted averages of Frequency to obtain the Jerk of the magnitude of body angular velocity for the activity and the subject (grouped by ActivityName and Subject)
 
-Subject 1:30
-
-Activity
-
-1 WALKING
-2 WALKING_UPSTAIRS
-3 WALKING_DOWNSTAIRS
-4 SITTING
-5 STANDING
-6 LAYING
-
-
-
-you have changed the units of observation- the data in the tidy data set is now grouped means rather than individual observations
-
-you might have fixed the variable names- they are illegal in R as is (which can potentially cause anlaysis problems) and in the orginal data there are mistakes like duplicate column names and names that do not conform to it
-
-
-
-All in all, it is suggesting that the information in features info is useful but has problems that should be dealt with.
-
-
-
-
-
-Feature Selection 
-=================
-
-The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
-
-Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
-
-Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
-
-These signals were used to estimate variables of the feature vector for each pattern:  
-'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
-
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
-
-The set of variables that were estimated from these signals are: 
-
-mean(): Mean value
-std(): Standard deviation
-
-Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
-
-gravityMean
-tBodyAccMean
-tBodyAccJerkMean
-tBodyGyroMean
-tBodyGyroJerkMean
-
-The complete list of variables of each feature vector is available in 'features.txt'

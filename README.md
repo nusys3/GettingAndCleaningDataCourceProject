@@ -2,15 +2,18 @@
 This project is prepared for the course project of Getting and Cleaning Data class
 
 ## Files 
-run_analysis.R file is the script file performing the analysis.
-Codebook.md is the codebook that indicates all the variables and summaries you calculated, along with units, and any other relevant information
-Readme.md is describing how the script is working
+**run_analysis.R** is the script file performing the analysis.
+**Codebook.md** is the codebook that indicates all the variables and summaries you calculated, along with units, and any other relevant information
+**Readme.md** is describing how the script is working
 
 
 ## How to run "run_analysis.R" script file
 
-### Input Data Preparation
-As an input, specific data files are required and should be placed as follow:
+### Required Packages
+This script is using **dplyr** and **stringr** packages
+
+### Input Data and Script Preparation
+As an input, specific data files are required and should be placed under Dataset subdirectory as follow:
 
 * "./Dataset/test/subject_test.txt"
 * "./Dataset/test/X_test.txt"
@@ -23,10 +26,13 @@ As an input, specific data files are required and should be placed as follow:
 * "./Dataset/features.txt"
 * "./Dataset/activity_labels.txt"
 
-### Required Packages
-This script is using dplyr and stringr packages
+Place the script file as well.
+
+* "./run_analysis.R"
+
 
 ### How to run the script
+Make sure getwd() returns the directory where the script file and Dataset directory is located.
 ```R
 source(file = "./run_analysis.R")
 ```
