@@ -14,7 +14,7 @@ library(stringr)
         
         # Load training data
         trainSubject <- read.table(file = "./Dataset/train/subject_train.txt", header = FALSE)
-                trainSet <- read.table(file = "./Dataset/train/X_train.txt", header = FALSE)
+        trainSet <- read.table(file = "./Dataset/train/X_train.txt", header = FALSE)
         trainLabels <- read.table(file = "./Dataset/train/y_train.txt", header = FALSE)
         
         # Merge test data and training data
@@ -54,7 +54,8 @@ library(stringr)
 
         # Fix the error of BodyBody
         names(selectedSetWithActivity) <- gsub("BodyBody","Body", names(selectedSetWithActivity))
-
+        
+        # Re-format names for better description
         names(selectedSetWithActivity) <- gsub("^t","Time", names(selectedSetWithActivity))
         names(selectedSetWithActivity) <- gsub("^f","Freq", names(selectedSetWithActivity))
         #names(selectedSetWithActivity) <- gsub("Acc","Acceleration", names(selectedSetWithActivity))
