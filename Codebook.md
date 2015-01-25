@@ -25,7 +25,9 @@ What run_analysis.R script does is to come up with the **tidy data set** for the
 
 ## ActivityName
 An activity the person(subject) performed wearing a smartphone on the waist.
+
 + 1:6
+
 1. WALKING
 2. WALKING_UPSTAIRS
 3. WALKING_DOWNSTAIRS
@@ -35,7 +37,9 @@ An activity the person(subject) performed wearing a smartphone on the waist.
 
 ## SubjectNum
 An identifier of the subject who carried out the experiment
+
 + 1:30
+
 
 ## AvgTimeBodyAccmeanX
 ## AvgTimeBodyAccmeanY
